@@ -1,0 +1,58 @@
+/* Styles for login page */
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.2em;
+}
+
+form input[type="submit"] {
+  background-color: #0062cc;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #0062cc;
+}
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  margin-top: auto;
+}
