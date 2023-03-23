@@ -12,6 +12,7 @@ import java.util.List;
  * The MainController class is a REST controller for managing student data in the Institute Management System.
  */
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping(path = "/api/student")
 public class StudentController {
     @Autowired
@@ -46,6 +47,7 @@ public class StudentController {
         studentService.createStudent(currStudent);
         return currStudent;
     }
+
 
     /**
      * Update an existing student

@@ -41,23 +41,44 @@
   <main>
     <section id="create-student">
       <h2>Create Student</h2>
-      <form>
-        <label for="first-name">First Name:</label>
-        <input type="text" id="first-name" name="first-name" required>
-
-        <label for="last-name">Last Name:</label>
-        <input type="text" id="last-name" name="last-name" required>
+      <form id= "createstudentForm">
+        <label for="name">Name:</label>
+        <input type="text" id="createname" name="createname" required>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone">
+        <input type="email" id="createemail" name="createemail" required>
 
         <button type="submit">Create</button>
       </form>
     </section>
   </main>
+
+  <script>
+
+    document.getElementById("studentForm").addEventListener("submit",(event)=>{
+      event.preventDefault();
+      let Name = document.querySelector('#createname').value;
+      let Email = document.querySelector('#createemail').value;
+      console.log("the values are here");
+
+      let url =`http://localhost:8080/api/student`;
+
+    let reqConfig = {
+    method: "POST",
+    headers : {"Content-Type" :"application/json;charset=UTF-8" },
+    body: JSON.stringify({Studentname:Name, Studentemail:Email})
+  }
+  fetch(url,reqConfig)
+  .then((response) => {return response.json();})
+  .then((parsedResponse) =>{console.log(parsedResponse);})
+
+
+
+    });
+
+  </script>
+
+
 
   <footer>
     <div class="container">

@@ -41,20 +41,68 @@
   <main>
     <section id="read-student">
       <h2>Read Student</h2>
-      <form>
-        <label for="student-id">student ID:</label>
-        <input type="text" id="student-id" name="student-id" required>
+      <form id = "readstudentForm">
+        <label for="readstudent-id">student ID:</label>
+        <input type="text" id="readstudent-id" name="readstudent-id" required>
 
         <button type="submit">Read</button>
       </form>
 
-      <!-- student information will be displayed here -->
-      <div id="student-info">
-        <!-- student information will be dynamically added here -->
-      </div>
+     
+
+      <table id="studentTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+
     </section>
   </main>
 
+  <script>
+    document.getElementById("readstudentForm").addEventListener("submit",(event)=>{
+      event.preventDefault();
+      let id = document.querySelector('#readstudent-id').value;
+      console.log("the value is here");
+
+      let url = `http://localhost:8080/api/student/${id}`;
+      let table = document.querySelector("#studentTable tbody");
+         table.innerHTML = '';
+
+         let reqCongig = {
+          method: "GET"
+}
+
+    fetch(url,reqCongig)
+      .then((response) => {return response.json();})
+      .then(data => {
+
+        console.log(data);
+      const row = document.createElement('tr');
+      const idCell = document.createElement('td');
+      const nameCell = document.createElement('td');
+      const emailCell = document.createElement('td');
+      idCell.textContent = data.Stusentid;
+      nameCell.textContent = data.Studentname;
+      emailCell.textContent = data.Studentemail;
+      row.appendChild(idCell);
+      row.appendChild(nameCell);
+      row.appendChild(emailCell);
+      table.appendChild(row);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+    });
+
+  
+  </script>
   <footer>
     <div class="container">
       <p>&copy; 2023 Institute Management Service</p>

@@ -41,19 +41,68 @@
   <main>
     <section id="read-staff">
       <h2>Read Staff</h2>
-      <form>
+      <form id= "readstaffForm">
         <label for="staff-id">Staff ID:</label>
-        <input type="text" id="staff-id" name="staff-id" required>
+        <input type="text" id="readstaff-id" name="readstaff-id" required>
 
         <button type="submit">Read</button>
       </form>
 
-      <!-- Staff information will be displayed here -->
-      <div id="staff-info">
-        <!-- Staff information will be dynamically added here -->
-      </div>
+      <table id="studentTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Salary</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
     </section>
   </main>
+
+  <script>
+    document.getElementById("readstudentForm").addEventListener("submit",(event)=>{
+      event.preventDefault();
+      let id = document.querySelector('#readstudent-id').value;
+      console.log("the value is here");
+
+      let url = `http://localhost:8080/api/student/${id}`;
+      let table = document.querySelector("#studentTable tbody");
+         table.innerHTML = '';
+
+         let reqCongig = {
+          method: "GET"
+}
+
+    fetch(url,reqCongig)
+      .then((response) => {return response.json();})
+      .then(data => {
+
+        console.log(data);
+      const row = document.createElement('tr');
+      const idCell = document.createElement('td');
+      const nameCell = document.createElement('td');
+      const emailCell = document.createElement('td');
+      const sallaryCall = document.createElement('td');
+      idCell.textContent = data.Staffid;
+      nameCell.textContent = data.Staffname;
+      emailCell.textContent = data.Staffemail;
+      sallaryCall.textContent = data.Salary;
+      row.appendChild(idCell);
+      row.appendChild(nameCell);
+      row.appendChild(emailCell);
+      table.appendChild(row);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+    });
+
+  
+  </script>
 
   <footer>
     <div class="container">
