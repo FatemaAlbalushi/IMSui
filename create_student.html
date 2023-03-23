@@ -43,10 +43,10 @@
       <h2>Create Student</h2>
       <form id= "createstudentForm">
         <label for="name">Name:</label>
-        <input type="text" id="createname" name="createname" required>
+        <input type="text" id="createstudentname" name="createstudentname" required>
 
         <label for="email">Email:</label>
-        <input type="email" id="createemail" name="createemail" required>
+        <input type="email" id="createstudentemail" name="createstudentemail" required>
 
         <button type="submit">Create</button>
       </form>
@@ -55,10 +55,10 @@
 
   <script>
 
-    document.getElementById("studentForm").addEventListener("submit",(event)=>{
+    document.getElementById("createstudentForm").addEventListener("submit",(event)=>{
       event.preventDefault();
-      let Name = document.querySelector('#createname').value;
-      let Email = document.querySelector('#createemail').value;
+      let Name = document.querySelector('#createstudentname').value;
+      let Email = document.querySelector('#createstudentemail').value;
       console.log("the values are here");
 
       let url =`http://localhost:8080/api/student`;

@@ -41,19 +41,46 @@
   <main>
     <section id="create-staff">
       <h2>Create Staff</h2>
-      <form>
+      <form id= "createstaffForm">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="createstaffname" name="createstaffname" required>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="createstaffemail" name="createstaffemail" required>
 
+        <label for="salary">Email:</label>
+        <input type="number" id="createstaffsalary" name="createstaffsalary" required>
 
         <button type="submit">Create</button>
       </form>
     </section>
   </main>
 
+  <script>
+
+    document.getElementById("createstaffForm").addEventListener("submit",(event)=>{
+      event.preventDefault();
+      let Name = document.querySelector('#createstaffname').value;
+      let Email = document.querySelector('#createstaffemail').value;
+      let Salary = document.querySelector('#createstaffsalary').value;
+      console.log("the values are here");
+
+      let url =`http://localhost:8080/api/student`;
+
+    let reqConfig = {
+    method: "POST",
+    headers : {"Content-Type" :"application/json;charset=UTF-8" },
+    body: JSON.stringify({Studentname:Name, Studentemail:Email, salary:Salary})
+  }
+  fetch(url,reqConfig)
+  .then((response) => {return response.json();})
+  .then((parsedResponse) =>{console.log(parsedResponse);})
+
+
+
+    });
+
+  </script>
   <footer>
     <div class="container">
       <p>&copy; 2023 Institute Management Service</p>

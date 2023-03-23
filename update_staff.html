@@ -41,21 +41,47 @@
   <main>
     <section id="update-staff">
       <h2>Update Staff</h2>
-      <form>
+      <form id="updatestaffForm">
         <label for="staff-id">Staff ID:</label>
-        <input type="text" id="staff-id" name="staff-id" required>
+        <input type="text" id="updatestaff-id" name="updatestaff-id" required>
 
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="updatestaffname" name="updatestaffname" required>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="updatestaffemail" name="updatestaffemail" required>
+
+        <label for="salary">Salary:</label>
+        <input type="number" id="updatestaffsalary" name="updatestaffsalary" required>
 
 
         <button type="submit">Update</button>
       </form>
     </section>
   </main>
+
+  <script>
+    document.getElementById("updatestaffForm").addEventListener("submit",(event)=>{
+      event.preventDefault();
+      let id = document.querySelector('#updatestaff-id').value;
+      let name = document.querySelector('#updatestaffname').value;
+      let email = document.querySelector('#updatestaffemail').value;
+      let salary = document.querySelector('#updatestaffsalary').value;
+      console.log("the values are here");
+  
+      let url = `http://localhost:8080/api/student/${id}`;
+  
+      let reqConfig = {
+        method: "PUT",
+        headers: {"Content-Type": "application/json;charset=UTF-8"},
+        body: JSON.stringify({Studentname: name, Studentemail: email, salary: salary})
+      }
+  
+      fetch(url, reqConfig)
+      .then((response) => {return response.json();})
+      .then((parsedResponse) => {console.log(parsedResponse);})
+    });
+  </script>
 
   <footer>
     <div class="container">

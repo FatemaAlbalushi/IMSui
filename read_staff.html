@@ -90,10 +90,11 @@
       idCell.textContent = data.Staffid;
       nameCell.textContent = data.Staffname;
       emailCell.textContent = data.Staffemail;
-      sallaryCall.textContent = data.Salary;
+      sallaryCall.textContent = data.salary;
       row.appendChild(idCell);
       row.appendChild(nameCell);
       row.appendChild(emailCell);
+      row.appendChild(sallaryCall);
       table.appendChild(row);
       })
       .catch((error) => {
