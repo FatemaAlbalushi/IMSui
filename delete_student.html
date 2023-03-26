@@ -22,6 +22,7 @@
                 <li><a href="read_student.html">Read Student</a></li>
                 <li><a href="update_student.html">Update Student</a></li>
                 <li><a href="delete_student.html">Delete Student</a></li>
+                <li><a href="viewAllstudent.html">View Student</a></li>
               </ul>
             </li>
             <li><a href="#">Teachers</a>
@@ -30,6 +31,7 @@
                 <li><a href="read_staff.html">Read Teacher</a></li>
                 <li><a href="update_staff.html">Update Teacher</a></li>
                 <li><a href="delete_staff.html">Delete Teacher</a></li>
+                <li><a href="viewAllstaff.html">View Staff</a></li>
               </ul>
             </li>
           </ul>
@@ -49,6 +51,29 @@
       </form>
     </section>
   </main>
+
+  <script>
+    document.getElementById("deletestudentForm").addEventListener("submit", (event) => {
+      event.preventDefault();
+      let id = document.querySelector("#deletestudent-id").value;
+      let url = `http://localhost:8080/api/student/${id}`;
+      let reqConfig = {
+        method: "DELETE"
+      };
+
+      fetch(url, reqConfig)
+        .then((response) => {
+          if (response.ok) {
+            alert(`Student with ID ${id} deleted successfully.`);
+          } else {
+            throw new Error (`Failed to delete Student with ID ${id}.`);
+          }
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    });
+  </script>
 
   <footer>
     <div class="container">

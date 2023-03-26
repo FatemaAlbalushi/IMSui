@@ -1,10 +1,10 @@
-<!-- read_staff.html -->
+<!-- read_student.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IMS - Read Staff</title>
+  <title>IMS - Read Student</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -41,14 +41,8 @@
   </header>
 
   <main>
-    <section id="read-staff">
-      <h2>Read Staff</h2>
-      <form id= "readstaffForm">
-        <label for="staff-id">Staff ID:</label>
-        <input type="text" id="readstaff-id" name="readstaff-id" required>
-
-        <button type="submit">Read</button>
-      </form>
+    <section id="view-students">
+      <h2>View Students</h2>
 
       <table id="studentTable">
         <thead>
@@ -56,7 +50,6 @@
             <th>ID</th>
             <th>Name</th>
             <th>Email</th>
-            <th>Salary</th>
           </tr>
         </thead>
         <tbody>
@@ -66,45 +59,35 @@
   </main>
 
   <script>
-    document.getElementById("readstaffForm").addEventListener("submit",(event)=>{
-      event.preventDefault();
-      let id = document.querySelector('#readstaff-id').value;
-      console.log("the value is here");
+    let url = "http://localhost:8080/api/student";
+    let table = document.querySelector("#studentTable tbody");
+    table.innerHTML = '';
 
-      let url = `http://localhost:8080/api/student/${id}`;
-      let table = document.querySelector("#studentTable tbody");
-         table.innerHTML = '';
+    let reqCongig = {
+      method: "GET"
+    }
 
-         let reqCongig = {
-          method: "GET"
-}
-
-    fetch(url,reqCongig)
+    fetch(url, reqCongig)
       .then((response) => {return response.json();})
       .then(data => {
-
         console.log(data);
-      const row = document.createElement('tr');
-      const idCell = document.createElement('td');
-      const nameCell = document.createElement('td');
-      const emailCell = document.createElement('td');
-      const sallaryCall = document.createElement('td');
-      idCell.textContent = data.Staffid;
-      nameCell.textContent = data.Staffname;
-      emailCell.textContent = data.Staffemail;
-      sallaryCall.textContent = data.salary;
-      row.appendChild(idCell);
-      row.appendChild(nameCell);
-      row.appendChild(emailCell);
-      row.appendChild(sallaryCall);
-      table.appendChild(row);
+        data.forEach(student => {
+          const row = document.createElement('tr');
+          const idCell = document.createElement('td');
+          const nameCell = document.createElement('td');
+          const emailCell = document.createElement('td');
+          idCell.textContent = student.Stusentid;
+          nameCell.textContent = student.Studentname;
+          emailCell.textContent = student.Studentemail;
+          row.appendChild(idCell);
+          row.appendChild(nameCell);
+          row.appendChild(emailCell);
+          table.appendChild(row);
+        });
       })
       .catch((error) => {
         console.error('Error:', error);
       });
-    });
-
-  
   </script>
 
   <footer>

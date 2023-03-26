@@ -22,14 +22,16 @@
                 <li><a href="read_student.html">Read Student</a></li>
                 <li><a href="update_student.html">Update Student</a></li>
                 <li><a href="delete_student.html">Delete Student</a></li>
+                <li><a href="viewAllstudent.html">View Student</a></li>
               </ul>
             </li>
-            <li><a href="#">Teachers</a>
+            <li><a href="#">satffs</a>
               <ul>
-                <li class="active"><a href="create_staff.html">Create Teacher</a></li>
-                <li><a href="read_staff.html">Read Teacher</a></li>
-                <li><a href="update_staff.html">Update Teacher</a></li>
-                <li><a href="delete_staff.html">Delete Teacher</a></li>
+                <li class="active"><a href="create_staff.html">Create Satff</a></li>
+                <li><a href="read_staff.html">Read Satff</a></li>
+                <li><a href="update_staff.html">Update Satff</a></li>
+                <li><a href="delete_staff.html">Delete Satff</a></li>
+                <li><a href="viewAllstaff.html">View Staff</a></li>
               </ul>
             </li>
           </ul>
@@ -48,16 +50,14 @@
         <label for="email">Email:</label>
         <input type="email" id="createstaffemail" name="createstaffemail" required>
 
-        <label for="salary">Email:</label>
+        <label for="salary">Salary:</label>
         <input type="number" id="createstaffsalary" name="createstaffsalary" required>
 
         <button type="submit">Create</button>
       </form>
     </section>
   </main>
-
   <script>
-
     document.getElementById("createstaffForm").addEventListener("submit",(event)=>{
       event.preventDefault();
       let Name = document.querySelector('#createstaffname').value;
@@ -70,14 +70,11 @@
     let reqConfig = {
     method: "POST",
     headers : {"Content-Type" :"application/json;charset=UTF-8" },
-    body: JSON.stringify({Studentname:Name, Studentemail:Email, salary:Salary})
+    body: JSON.stringify({StaffName:Name, StaffEmail:Email, salary:Salary})
   }
   fetch(url,reqConfig)
   .then((response) => {return response.json();})
   .then((parsedResponse) =>{console.log(parsedResponse);})
-
-
-
     });
 
   </script>
