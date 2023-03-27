@@ -11,6 +11,7 @@ import java.util.List;
  * The StaffController class is a REST controller for managing Staff data in the Institute Management System.
  */
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping(path = "/api/staff")
 public class StaffController {
     @Autowired
