@@ -24,12 +24,12 @@
                 <li><a href="viewAllstudent.html">View Student</a></li>
               </ul>
             </li>
-            <li><a href="#">satffs</a>
+            <li><a href="#">Staffs</a>
               <ul>
-                <li class="active"><a href="create_staff.html">Create Satff</a></li>
-                <li><a href="read_staff.html">Read Satff</a></li>
-                <li><a href="update_staff.html">Update Satff</a></li>
-                <li><a href="delete_staff.html">Delete Satff</a></li>
+                <li class="active"><a href="create_staff.html">Create Staff</a></li>
+                <li><a href="read_staff.html">Read Staff</a></li>
+                <li><a href="update_staff.html">Update Staff</a></li>
+                <li><a href="delete_staff.html">Delete Staff</a></li>
                 <li><a href="viewAllstaff.html">View Staff</a></li>
               </ul>
             </li>
@@ -41,15 +41,9 @@
   </header>
 
   <main>
-    <section id="read-student">
-      <h2>Read Student</h2>
-      <form id = "readstudentForm">
-        <label for="readstudent-id">student ID:</label>
-        <input type="text" id="readstudent-id" name="readstudent-id" required>
+    <section id="view-students">
+      <h2>View Students</h2>
 
-        <button type="submit">Read</button>
-      </form>
-      
       <table id="studentTable">
         <thead>
           <tr>
@@ -61,48 +55,41 @@
         <tbody>
         </tbody>
       </table>
-
     </section>
   </main>
 
   <script>
-    document.getElementById("readstudentForm").addEventListener("submit",(event)=>{
-      event.preventDefault();
-      let id = document.querySelector('#readstudent-id').value;
-      console.log("the value is here");
+    let url = "http://localhost:8080/api/student";
+    let table = document.querySelector("#studentTable tbody");
+    table.innerHTML = '';
 
-      let url = `http://localhost:8080/api/student/${id}`;
-      let table = document.querySelector("#studentTable tbody");
-         table.innerHTML = '';
+    let reqCongig = {
+      method: "GET"
+    }
 
-         let reqCongig = {
-          method: "GET"
-}
-
-    fetch(url,reqCongig)
+    fetch(url, reqCongig)
       .then((response) => {return response.json();})
       .then(data => {
-
         console.log(data);
-      const row = document.createElement('tr');
-      const idCell = document.createElement('td');
-      const nameCell = document.createElement('td');
-      const emailCell = document.createElement('td');
-      idCell.textContent = data.Stusentid;
-      nameCell.textContent = data.Studentname;
-      emailCell.textContent = data.Studentemail;
-      row.appendChild(idCell);
-      row.appendChild(nameCell);
-      row.appendChild(emailCell);
-      table.appendChild(row);
+        data.forEach(student => {
+          const row = document.createElement('tr');
+          const idCell = document.createElement('td');
+          const nameCell = document.createElement('td');
+          const emailCell = document.createElement('td');
+          idCell.textContent = student.Stusentid;
+          nameCell.textContent = student.Studentname;
+          emailCell.textContent = student.Studentemail;
+          row.appendChild(idCell);
+          row.appendChild(nameCell);
+          row.appendChild(emailCell);
+          table.appendChild(row);
+        });
       })
       .catch((error) => {
         console.error('Error:', error);
       });
-    });
-
-  
   </script>
+
   <footer>
     <div class="container">
       <p>&copy; 2023 Institute Management Service</p>

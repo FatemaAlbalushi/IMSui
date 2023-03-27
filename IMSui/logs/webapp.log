@@ -80,4 +80,45 @@
 2023-03-27 10:06:14.413 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
 2023-03-27 10:09:43.084 INFO  c.I.IMSui.Service.StudentService - Getting all student
 2023-03-27 10:09:50.021 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
+<<<<<<< HEAD
 2023-03-27 11:24:21.707 INFO  c.I.IMSui.Service.StudentService - Created student with id: 5
+=======
+>>>>>>> 82e6b053a463e91fc19e723351cd00432ea0a7b3
+2023-03-27 12:15:58.882 INFO  c.I.IMSui.ImSuiApplication - Starting ImSuiApplication using Java 17.0.2 with PID 10792 (C:\Users\LAP-10\Documents\UI\InstituteManagementSystemUI\IMSui\target\classes started by LAP-10 in C:\Users\LAP-10\Documents\UI\InstituteManagementSystemUI\IMSui)
+2023-03-27 12:15:58.886 INFO  c.I.IMSui.ImSuiApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-27 12:16:00.362 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-03-27 12:16:00.375 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-27 12:16:00.376 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-27 12:16:00.376 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-27 12:16:00.520 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-03-27 12:16:00.520 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1557 ms
+2023-03-27 12:16:02.253 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-03-27 12:16:02.297 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-27 12:16:02.323 INFO  c.I.IMSui.ImSuiApplication - Started ImSuiApplication in 3.882 seconds (process running for 4.708)
+2023-03-27 12:17:01.001 INFO  c.I.IMSui.ImSuiApplication - Starting ImSuiApplication using Java 17.0.2 with PID 12692 (C:\Users\LAP-10\Documents\UI\InstituteManagementSystemUI\IMSui\target\classes started by LAP-10 in C:\Users\LAP-10\Documents\UI\InstituteManagementSystemUI\IMSui)
+2023-03-27 12:17:01.004 INFO  c.I.IMSui.ImSuiApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-27 12:17:02.438 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-03-27 12:17:02.448 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-27 12:17:02.449 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-27 12:17:02.449 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-27 12:17:02.587 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-03-27 12:17:02.587 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1523 ms
+2023-03-27 12:17:03.651 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-03-27 12:17:03.674 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-27 12:17:03.686 INFO  c.I.IMSui.ImSuiApplication - Started ImSuiApplication in 3.152 seconds (process running for 3.921)
+2023-03-27 12:17:23.496 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-27 12:17:23.497 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-03-27 12:17:23.499 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-03-27 12:17:23.580 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 12:17:34.212 INFO  c.I.IMSui.Service.StudentService - Created student with id: 1
+2023-03-27 12:17:38.159 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 12:17:51.311 INFO  c.I.IMSui.Service.StaffService - Created Staff with id: 1
+2023-03-27 12:18:32.917 INFO  c.I.IMSui.Service.StudentService - Created student with id: 2
+2023-03-27 12:18:36.886 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 12:18:50.098 INFO  c.I.IMSui.Service.StudentService - get student with id: 1
+2023-03-27 12:18:50.098 INFO  c.I.IMSui.Service.StudentService - delete student with id: 1
+2023-03-27 12:18:55.757 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 12:19:19.983 INFO  c.I.IMSui.Service.StudentService - get student with id: 2
+2023-03-27 12:19:19.984 INFO  c.I.IMSui.Service.StudentService - updated student with id: 2
+2023-03-27 12:19:24.848 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 12:19:30.615 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
