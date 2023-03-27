@@ -1,0 +1,83 @@
+2023-03-27 08:12:41.434 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 08:26:43.564 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 08:26:51.631 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 08:28:10.785 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 08:28:12.886 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 08:29:02.762 INFO  c.I.IMSui.Service.StudentService - Created student with id: 15
+2023-03-27 08:29:10.317 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 08:29:48.686 INFO  c.I.IMSui.Service.StudentService - Created student with id: 16
+2023-03-27 08:30:04.749 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 08:30:22.156 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 08:33:22.699 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 08:33:34.670 INFO  c.I.IMSui.Service.StudentService - Created student with id: 17
+2023-03-27 08:36:20.858 INFO  c.I.IMSui.Service.StudentService - Created student with id: 18
+2023-03-27 08:36:32.264 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 08:36:35.477 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 08:39:14.647 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 08:39:17.463 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
+2023-03-27 08:40:42.138 INFO  c.I.IMSui.ImSuiApplication - Starting ImSuiApplication using Java 17.0.2 with PID 12588 (C:\Users\LAP-10\Documents\UI\InstituteManagementSystemUI\IMSui\target\classes started by LAP-10 in C:\Users\LAP-10\Documents\UI\InstituteManagementSystemUI\IMSui)
+2023-03-27 08:40:42.141 INFO  c.I.IMSui.ImSuiApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-27 08:40:43.505 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-03-27 08:40:43.514 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-27 08:40:43.515 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-27 08:40:43.515 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-27 08:40:43.611 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-03-27 08:40:43.612 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1426 ms
+2023-03-27 08:40:44.697 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-03-27 08:40:44.722 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-27 08:40:44.735 INFO  c.I.IMSui.ImSuiApplication - Started ImSuiApplication in 2.884 seconds (process running for 3.371)
+2023-03-27 08:41:09.036 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-27 08:41:09.037 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-03-27 08:41:09.040 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-03-27 08:41:09.258 INFO  c.I.IMSui.Service.StaffService - Created Staff with id: 1
+2023-03-27 08:41:13.001 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
+2023-03-27 08:41:18.656 INFO  c.I.IMSui.Service.StaffService - get Staff with id: 1
+2023-03-27 08:41:33.655 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
+2023-03-27 08:42:19.211 INFO  c.I.IMSui.Service.StaffService - Created Staff with id: 2
+2023-03-27 08:42:25.638 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
+2023-03-27 08:42:32.925 INFO  c.I.IMSui.Service.StaffService - get Staff with id: 2
+2023-03-27 08:43:25.953 INFO  c.I.IMSui.Service.StaffService - get Staff with id: 1
+2023-03-27 08:43:29.679 INFO  c.I.IMSui.Service.StaffService - get Staff with id: 2
+2023-03-27 08:43:40.612 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
+2023-03-27 08:44:53.282 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
+2023-03-27 08:45:23.601 INFO  c.I.IMSui.Service.StaffService - get Staff with id: 1
+2023-03-27 08:45:23.602 INFO  c.I.IMSui.Service.StaffService - updated Staff with id: 1
+2023-03-27 08:45:31.202 INFO  c.I.IMSui.Service.StaffService - get Staff with id: 1
+2023-03-27 08:45:35.194 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
+2023-03-27 08:45:42.720 INFO  c.I.IMSui.Service.StaffService - get Staff with id: 2
+2023-03-27 08:45:42.721 INFO  c.I.IMSui.Service.StaffService - delete Staff with id: 2
+2023-03-27 08:45:51.717 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
+2023-03-27 08:46:08.767 INFO  c.I.IMSui.Service.StaffService - Created Staff with id: 3
+2023-03-27 08:46:13.414 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
+2023-03-27 08:46:16.125 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 08:46:26.524 INFO  c.I.IMSui.Service.StudentService - Created student with id: 1
+2023-03-27 08:46:36.951 INFO  c.I.IMSui.Service.StudentService - Created student with id: 2
+2023-03-27 08:46:47.488 INFO  c.I.IMSui.Service.StudentService - Created student with id: 3
+2023-03-27 08:46:56.305 INFO  c.I.IMSui.Service.StudentService - get student with id: 2
+2023-03-27 08:46:59.733 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 08:47:10.240 INFO  c.I.IMSui.Service.StudentService - get student with id: 1
+2023-03-27 08:47:10.241 INFO  c.I.IMSui.Service.StudentService - delete student with id: 1
+2023-03-27 08:47:22.554 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 08:47:35.014 INFO  c.I.IMSui.Service.StudentService - Created student with id: 4
+2023-03-27 08:47:39.136 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 08:48:32.238 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 08:49:32.689 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 08:49:40.004 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
+2023-03-27 08:49:59.574 INFO  c.I.IMSui.Service.StaffService - get Staff with id: 1
+2023-03-27 08:49:59.575 INFO  c.I.IMSui.Service.StaffService - updated Staff with id: 1
+2023-03-27 08:50:02.751 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 08:50:05.588 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
+2023-03-27 08:50:09.138 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 08:52:43.014 INFO  c.I.IMSui.Service.StudentService - get student with id: 4
+2023-03-27 08:52:43.015 INFO  c.I.IMSui.Service.StudentService - updated student with id: 4
+2023-03-27 08:52:50.556 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 08:52:57.899 INFO  c.I.IMSui.Service.StudentService - get student with id: 4
+2023-03-27 09:12:37.085 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 09:12:39.828 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
+2023-03-27 09:12:47.431 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
+2023-03-27 09:56:12.939 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 09:56:17.902 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
+2023-03-27 10:06:14.413 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
+2023-03-27 10:09:43.084 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 10:09:50.021 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
+2023-03-27 11:24:21.707 INFO  c.I.IMSui.Service.StudentService - Created student with id: 5
