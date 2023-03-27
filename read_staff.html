@@ -11,7 +11,7 @@
   <header>
     <header>
       <div class="container">
-        <a href="#" class="logo"><img src="logo.png" alt="IMS Logo" /></a>
+        <a href="aboutUs.html" class="logo"><img src="https://th.bing.com/th/id/OIP.0RW8ONP2574Wo8QaIFGFzQHaGE?pid=ImgDet&rs=1" alt="IMS Logo" /></a>
         <nav>
           <ul>
             <li><a href="main.html">Home </a></li>
@@ -71,7 +71,7 @@
       let id = document.querySelector('#readstaff-id').value;
       console.log("the value is here");
 
-      let url = `http://localhost:8080/api/student/${id}`;
+      let url = `http://localhost:8080/api/staff/${id}`;
       let table = document.querySelector("#studentTable tbody");
          table.innerHTML = '';
 
@@ -89,9 +89,9 @@
       const nameCell = document.createElement('td');
       const emailCell = document.createElement('td');
       const sallaryCall = document.createElement('td');
-      idCell.textContent = data.Staffid;
-      nameCell.textContent = data.Staffname;
-      emailCell.textContent = data.Staffemail;
+      idCell.textContent = data.StaffId;
+      nameCell.textContent = data.StaffName;
+      emailCell.textContent = data.StaffEmail;
       sallaryCall.textContent = data.salary;
       row.appendChild(idCell);
       row.appendChild(nameCell);

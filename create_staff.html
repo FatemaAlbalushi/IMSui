@@ -11,7 +11,7 @@
   <header>
     <header>
       <div class="container">
-        <a href="#" class="logo"><img src="logo.png" alt="IMS Logo" /></a>
+        <a href="aboutUs.html" class="logo"><img src="https://th.bing.com/th/id/OIP.0RW8ONP2574Wo8QaIFGFzQHaGE?pid=ImgDet&rs=1" alt="IMS Logo" /></a>
         <nav>
           <ul>
             <li><a href="main.html">Home </a></li>
@@ -65,7 +65,7 @@
       let Salary = document.querySelector('#createstaffsalary').value;
       console.log("the values are here");
 
-      let url =`http://localhost:8080/api/student`;
+      let url =`http://localhost:8080/api/staff`;
 
     let reqConfig = {
     method: "POST",
@@ -73,7 +73,15 @@
     body: JSON.stringify({StaffName:Name, StaffEmail:Email, salary:Salary})
   }
   fetch(url,reqConfig)
-  .then((response) => {return response.json();})
+  .then((response) => {
+    //return response.json();
+    if (response.ok) {
+            alert(`Staff Created successfully.`);
+          } else {
+            throw new Error (`Failed to Create Staff.`);
+          }
+        
+  })
   .then((parsedResponse) =>{console.log(parsedResponse);})
     });
 

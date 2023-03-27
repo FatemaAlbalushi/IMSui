@@ -11,7 +11,7 @@
   <header>
     <header>
       <div class="container">
-        <a href="#" class="logo"><img src="logo.png" alt="IMS Logo" /></a>
+        <a href="aboutUs.html" class="logo"><img src="https://th.bing.com/th/id/OIP.0RW8ONP2574Wo8QaIFGFzQHaGE?pid=ImgDet&rs=1" alt="IMS Logo" /></a>
         <nav>
           <ul>
             <li><a href="main.html">Home </a></li>
@@ -62,8 +62,8 @@
     document.getElementById("updatestudentForm").addEventListener("submit",(event)=>{
       event.preventDefault();
       let id = document.querySelector('#updatestudent-id').value;
-      let name = document.querySelector('#updatename').value;
-      let email = document.querySelector('#updateemail').value;
+      let name = document.querySelector('#updatestudentname').value;
+      let email = document.querySelector('#updatestudentemail').value;
       console.log("the values are here");
   
       let url = `http://localhost:8080/api/student/${id}`;
@@ -75,7 +75,13 @@
       }
   
       fetch(url, reqConfig)
-      .then((response) => {return response.json();})
+      .then((response) => {
+        if (response.ok) {
+            alert(`Staff Updated successfully.`);
+          } else {
+            throw new Error (`Failed to Updated Staff.`);
+          }
+      })
       .then((parsedResponse) => {console.log(parsedResponse);})
     });
   </script>
