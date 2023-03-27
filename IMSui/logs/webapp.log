@@ -75,3 +75,5 @@
 2023-03-27 09:12:37.085 INFO  c.I.IMSui.Service.StudentService - Getting all student
 2023-03-27 09:12:39.828 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
 2023-03-27 09:12:47.431 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
+2023-03-27 09:56:12.939 INFO  c.I.IMSui.Service.StudentService - Getting all student
+2023-03-27 09:56:17.902 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
