@@ -74,3 +74,4 @@
 2023-03-27 08:52:57.899 INFO  c.I.IMSui.Service.StudentService - get student with id: 4
 2023-03-27 09:12:37.085 INFO  c.I.IMSui.Service.StudentService - Getting all student
 2023-03-27 09:12:39.828 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
+2023-03-27 09:12:47.431 INFO  c.I.IMSui.Service.StaffService - Getting all Staff
