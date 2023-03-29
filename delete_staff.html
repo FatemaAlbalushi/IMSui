@@ -34,7 +34,7 @@
                 <li><a href="viewAllstaff.html">View Staff</a></li>
               </ul>
             </li>
-            <li class="active"><a href="index.html">Log out </a></li>
+            <li class="active"><a href="#" class="logout">Log out </a></li>
           </ul>
         </nav>
       </div>
@@ -73,13 +73,21 @@
             alert(`Staff with ID ${id} deleted successfully.`);
             
           } else {
-            throw new Error (`Failed to delete staff with ID ${id}.`);
+            alert (`Failed to delete staff with ID ${id}.`);
           }
         })
         .catch((error) => {
           console.error('Error:', error);
         });
     });
+
+
+    document.querySelector('.logout').addEventListener('click', function(event) {
+      event.preventDefault();
+       localStorage.removeItem("username");
+       localStorage.removeItem("password");
+       window.location.href = 'index.html';
+});
   </script>
 
   <footer>

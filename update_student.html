@@ -33,7 +33,7 @@
                 <li><a href="viewAllstaff.html">View Staff</a></li>
               </ul>
             </li>
-            <li class="active"><a href="index.html">Log out </a></li>
+            <li class="active"><a href="#" class="logout">Log out </a></li>
           </ul>
         </nav>
       </div>
@@ -66,7 +66,7 @@
       let id = document.querySelector('#updatestudent-id').value;
       let name = document.querySelector('#updatestudentname').value;
       let email = document.querySelector('#updatestudentemail').value;
-      console.log("the values are here");
+      
   
       let url = `http://localhost:8080/api/student/${id}`;
   
@@ -82,11 +82,18 @@
         if (response.ok) {
             alert(`Staff Updated successfully.`);
           } else {
-            throw new Error (`Failed to Updated Staff.`);
+            alert (`Failed to Updated Staff.`);
           }
       })
       .then((parsedResponse) => {console.log(parsedResponse);})
     });
+
+    document.querySelector('.logout').addEventListener('click', function(event) {
+      event.preventDefault();
+       localStorage.removeItem("username");
+       localStorage.removeItem("password");
+       window.location.href = 'index.html';
+});
   </script>
 
   <footer>

@@ -81,12 +81,22 @@
     if (response.ok) {
             alert(`Staff Created successfully.`);
           } else {
-            throw new Error (`Failed to Create Staff.`);
+            alert(`Failed to Create Staff.`);
           }
         
   })
   .then((parsedResponse) =>{console.log(parsedResponse);})
     });
+
+      document.querySelector('.logout').addEventListener('click', function(event) {
+      event.preventDefault();
+      
+       localStorage.removeItem("username");
+       localStorage.removeItem("password");
+       window.location.href = 'index.html';
+});
+
+    
 
   </script>
   <footer>
