@@ -52,9 +52,13 @@
     <script>
       document.querySelector('.logout').addEventListener('click', function(event) {
       event.preventDefault();
-       localStorage.removeItem("username");
+      alert(`Are you sure you went to logout?.`);
+      if(alert.apply){
+        localStorage.removeItem("username");
        localStorage.removeItem("password");
        window.location.href = 'index.html';
+      }
+       
 });
 
     </script>
