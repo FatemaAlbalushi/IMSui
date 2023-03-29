@@ -63,6 +63,8 @@
   </main>
 
   <script>
+    const storedUsername = localStorage.getItem("username");
+    const storedPassword = localStorage.getItem("password");
     document.getElementById("updatestaffForm").addEventListener("submit",(event)=>{
       event.preventDefault();
       let id = document.querySelector('#updatestaff-id').value;
@@ -75,7 +77,8 @@
   
       let reqConfig = {
         method: "PUT",
-        headers: {"Content-Type": "application/json;charset=UTF-8"},
+        headers: {"Content-Type": "application/json;charset=UTF-8",
+        'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)},
         body: JSON.stringify({StaffName: name, StaffEmail: email, salary: salary})
       }
   

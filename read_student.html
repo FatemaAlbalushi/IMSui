@@ -66,6 +66,8 @@
   </main>
 
   <script>
+    const storedUsername = localStorage.getItem("username");
+    const storedPassword = localStorage.getItem("password");
     document.getElementById("readstudentForm").addEventListener("submit",(event)=>{
       event.preventDefault();
       let id = document.querySelector('#readstudent-id').value;
@@ -76,7 +78,10 @@
          table.innerHTML = '';
 
          let reqCongig = {
-          method: "GET"
+          method: "GET",
+          headers : {
+      "Content-Type" :"application/json;charset=UTF-8" ,
+      'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)},
 }
 
     fetch(url,reqCongig)

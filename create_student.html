@@ -56,7 +56,8 @@
   </main>
 
   <script>
-
+    const storedUsername = localStorage.getItem("username");
+    const storedPassword = localStorage.getItem("password");
     document.getElementById("createstudentForm").addEventListener("submit",(event)=>{
       event.preventDefault();
       let Name = document.querySelector('#createstudentname').value;
@@ -67,7 +68,9 @@
 
     let reqConfig = {
     method: "POST",
-    headers : {"Content-Type" :"application/json;charset=UTF-8" },
+    headers : {
+      "Content-Type" :"application/json;charset=UTF-8" ,
+      'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)},
     body: JSON.stringify({Studentname:Name, Studentemail:Email})
   }
   fetch(url,reqConfig)

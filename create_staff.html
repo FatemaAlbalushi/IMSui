@@ -58,6 +58,8 @@
     </section>
   </main>
   <script>
+    const storedUsername = localStorage.getItem("username");
+    const storedPassword = localStorage.getItem("password");
     document.getElementById("createstaffForm").addEventListener("submit",(event)=>{
       event.preventDefault();
       let Name = document.querySelector('#createstaffname').value;
@@ -69,7 +71,8 @@
 
     let reqConfig = {
     method: "POST",
-    headers : {"Content-Type" :"application/json;charset=UTF-8" },
+    headers : {"Content-Type" :"application/json;charset=UTF-8" ,
+    'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)},
     body: JSON.stringify({StaffName:Name, StaffEmail:Email, salary:Salary})
   }
   fetch(url,reqConfig)

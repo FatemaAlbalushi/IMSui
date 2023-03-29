@@ -59,6 +59,8 @@
   </main>
 
   <script>
+    const storedUsername = localStorage.getItem("username");
+    const storedPassword = localStorage.getItem("password");
     document.getElementById("updatestudentForm").addEventListener("submit",(event)=>{
       event.preventDefault();
       let id = document.querySelector('#updatestudent-id').value;
@@ -70,7 +72,8 @@
   
       let reqConfig = {
         method: "PUT",
-        headers: {"Content-Type": "application/json;charset=UTF-8"},
+        headers: {"Content-Type": "application/json;charset=UTF-8",
+        'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)},
         body: JSON.stringify({Studentname: name, Studentemail: email})
       }
   

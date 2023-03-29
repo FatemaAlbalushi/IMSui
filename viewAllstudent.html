@@ -59,12 +59,18 @@
   </main>
 
   <script>
+     const storedUsername = localStorage.getItem("username");
+    const storedPassword = localStorage.getItem("password");
     let url = "http://localhost:8080/api/student";
     let table = document.querySelector("#studentTable tbody");
     table.innerHTML = '';
 
     let reqCongig = {
-      method: "GET"
+      method: "GET",
+      headers : {
+      "Content-Type" :"application/json;charset=UTF-8" ,
+      'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)}
+      
     }
 
     fetch(url, reqCongig)

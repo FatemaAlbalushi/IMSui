@@ -54,12 +54,17 @@
   </main>
 
   <script>
+    const storedUsername = localStorage.getItem("username");
+    const storedPassword = localStorage.getItem("password");
     document.getElementById("deletestudentForm").addEventListener("submit", (event) => {
       event.preventDefault();
       let id = document.querySelector("#deletestudent-id").value;
       let url = `http://localhost:8080/api/student/${id}`;
       let reqConfig = {
-        method: "DELETE"
+        method: "DELETE",
+        headers : {
+       "Content-Type" :"application/json;charset=UTF-8" ,
+      'Authorization': 'Basic ' + btoa(storedUsername + ":" + storedPassword)},
       };
 
       fetch(url, reqConfig)
