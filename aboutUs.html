@@ -33,12 +33,13 @@
                 <li><a href="viewAllstaff.html">View Staff</a></li>
               </ul>
             </li>
-            <li class="active"><a href="index.html">Log out </a></li>
+            <li class="active"><a href="#" class="logout">Log out </a></li>
           </ul>
         </nav>
       </div>
     </header>
 
+   
     <main>
       <div class="container">
         <h1>About Us</h1>
@@ -47,6 +48,16 @@
         <p>If you have any questions or feedback about our system, please don't hesitate to contact us. We're always looking for ways to improve and would love to hear from you!</p>
       </div>
     </main>
+
+    <script>
+      document.querySelector('.logout').addEventListener('click', function(event) {
+      event.preventDefault();
+       localStorage.removeItem("username");
+       localStorage.removeItem("password");
+       window.location.href = 'index.html';
+});
+
+    </script>
 
     <footer>
       <div class="container">

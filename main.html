@@ -33,11 +33,13 @@
                 <li><a href="viewAllstaff.html">View Staff</a></li>
               </ul>
             </li>
-            <li class="active"><a href="index.html">Log out </a></li>
+            <li class="active"><a href="#" class="logout">Log out </a></li>
           </ul>
         </nav>
       </div>
     </header>
+
+
 
     <main>
       <div class="container">
@@ -47,6 +49,19 @@
       </div>
     </main>
 
+    <script>
+      document.querySelector('.logout').addEventListener('click', function(event) {
+      event.preventDefault();
+      alert(`Are you sure you went to logout?.`);
+      if(alert.apply){
+        localStorage.removeItem("username");
+       localStorage.removeItem("password");
+       window.location.href = 'index.html';
+      }
+       
+});
+
+    </script>
     <footer>
       <div class="container">
         <p>&copy; 2023 Institute Management Service</p>
